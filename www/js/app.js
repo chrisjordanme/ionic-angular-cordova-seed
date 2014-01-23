@@ -3,25 +3,17 @@
 angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('pet-index', {
-            url: '/pets',
-                views: {
-                    'pets-tab': {
-                        templateUrl: 'templates/pet-index.html',
-                        controller: 'PetIndexCtrl'
-                    }
-                }
+            .state('home', {
+                url: '/home',
+                templateUrl: 'templates/home.html',
+                controller: 'HomeCtrl'
             })
-            .state('pet-detail', {
-            url: '/pet/',
-                views: {
-                    'pets-tab': {
-                        templateUrl: 'templates/pet-detail.html',
-                        controller: 'PetDetailCtrl'
-                    }
-                }
+            .state('detail', {
+                url: '/detail',
+                templateUrl: 'templates/detail.html',
+                controller: 'DetailCtrl'
             });
 
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/tab/pets');
+        $urlRouterProvider.otherwise('/home');
     });
