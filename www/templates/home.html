@@ -1,5 +1,9 @@
-<view title="'Home'">
+<view title="'Home'" left-buttons="leftButtons" right-buttons="rightButtons">
     <content has-header="true" padding="true">
-        ...
+        <list>
+            <item ng-repeat="item in items" item="item">
+                {{item}}
+            </item>
+        </list>
     </content>
 </view>

@@ -3,15 +3,11 @@
 angular.module('starter.controllers', [])
     .controller('HomeCtrl', function($scope) {
 
-    })
-
-    .controller('DetailCtrl', function($scope, $stateParams) {
-
         $scope.leftButtons = [{
             type: 'button-positive',
             content: '<i class="icon ion-navicon"></i>',
             tap: function(e) {
-                
+
             }
         }];
 
@@ -21,5 +17,16 @@ angular.module('starter.controllers', [])
             tap: function(e) {
 
             }
-        }]
+        }];
+
+        $scope.items = [
+            'one',
+            'two',
+            'three'
+        ];
+
+    })
+
+    .controller('DetailCtrl', function($scope, $stateParams) {
+
     });
